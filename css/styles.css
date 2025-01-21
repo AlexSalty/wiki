@@ -1,4 +1,6 @@
+
 <style>
+
 /* Базовые стили для страницы */
 body {
     margin: 0;
@@ -6,21 +8,58 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Шапка сайта */
-.header {
-    background-color: #4267B2;
-    border-radius: 15px;
-    margin-bottom: 20px;
+/* Шапка сайта - стили хедера */
+.banner {
+    width: 100%;
+    height: 200px;
+    background: #1C2128;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.header a {
-    display: block;
+.banner__content {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.banner__left {
+    display: table-cell;
+    vertical-align: top;
+    width: 90%; /* регулируйте ширину левой части */
+}
+
+.banner__right {
+    display: table-cell;
+    vertical-align: top;
+    width: 20%; /* регулируйте ширину правой части */
+    padding-right: 10px;
+   padding-top: 0px; /* регулируйте это значение */
+
+}
+
+.banner__logo {
+    width: 150px;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.banner__title {
     color: white;
-    text-decoration: none;
-    padding: 15px;
-    text-align: center;
+    font-size: 34px;
+    margin-top: 16px;
+    margin-left: 20px;
 }
 
+.pattern-item {
+    width: 11px;
+    border-radius: 2px;
+    margin: 6px 0;
+    margin-left: auto; /* выравнивание элементов по правому краю */
+}
 /* Основная таблица с разметкой страницы */
 table {
     width: 100%;
@@ -138,128 +177,229 @@ td.content {
 
 
 /* Блок с фокусами/проектами */
-.focus-block {
-    padding: 25px;
+/* Основной контейнер */
+.course-card {
+    position: relative;
+    background: #7FDDFF;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    padding: 20px;
     margin-bottom: 20px;
-    text-align: left;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
-.focus-block .block-title {
-    text-align: left;
-    margin-bottom: 20px;
+/* Оверлей для фона */
+.course-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 240, 245, 0.9);
+    z-index: 1;
 }
 
-/* Если есть английский текст под заголовком */
-.focus-block .subtitle {
-    text-align: left;
-    color: #666;
-    margin-top: 5px;
+/* Контент карточки */
+.course-card-content {
+    position: relative;
+    z-index: 2;
 }
 
-.focus-item {
-    background-color: #4267B2;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
+/* Заголовок */
+.course-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+/* Навигационные ссылки */
+.nav-links {
+    display: table;
+    width: auto;
+    border-collapse: separate;
+    border-spacing: 12px 0;
+    margin: 0 -12px 16px -12px;
+}
+
+.nav-link {
+    display: table-cell;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 500;
     text-align: center;
-    width: 33%;
+    transition: background-color 0.2s;
 }
+
+.nav-link-primary {
+    background: #1A1B22;
+    color: white;
+}
+
+.nav-link-secondary {
+    background: white;
+    color: #1A1B22;
+    border: 1px solid #E5E5E5;
+}
+
+/* Информационные блоки */
+.info-blocks {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 16px 0;
+    margin: 0 -16px;
+}
+
+.info-block {
+    display: table-cell;
+    background: rgba(255,255,255,0.7);
+    padding: 12px;
+    border-radius: 12px;
+    vertical-align: top;
+    width: 33.33%;
+}
+
+.info-block-title {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.info-block-content {
+    color: #333;
+    font-weight: 500;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+}
+
 
 /* Секция команд */
 .teams-section {
     margin-top: 20px;
 }
 
-/* Карточка команды */
-.team-item {
-    background-color: #34A853;
+.teams-section table {
+    width: 100%;
+    border-spacing: 20px;
+    border-collapse: separate;
+    table-layout: fixed; /* Добавлено для фиксированной ширины колонок */
+    max-width: 100%; /* Ограничение максимальной ширины */
+}
+
+.teams-section tr {
+    display: table-row; /* Явно указываем отображение строки */
+}
+
+.teams-section td {
+    vertical-align: top;
+    width: 50%; /* Фиксированная ширина для каждой ячейки */
+    max-width: 50%; /* Максимальная ширина ячейки */
+}
+
+.info-card {
+    background-color: #3DD671;
+    border-radius: 12px;
+    padding: 24px;
     color: white;
-    padding: 15px;
-    border-radius: 15px;
-    display: flex;
-    gap: 15px;
-    margin: 10px;
-    align-items: flex-start;
-    transition: background-color 0.3s ease;
 }
 
-.team-item:nth-child(2n) {
-    background-color: #1E8449;
+.info-card__content {
+    display: table;
+    width: 100%;
 }
 
-.team-item:hover {
-    background-color: #2D924A;
+.info-card__left {
+    display: table-cell;
+    vertical-align: top;
+    width: 120px;
+    padding-right: 24px;
 }
 
-/* Фото команды */
-.team-photo {
-    flex: 0 0 80px;
-    width: 80px;
-    height: 80px;
+.info-card__right {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.info-card__image-wrapper {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
 }
 
-.team-photo img {
+.info-card__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
-.team-photo a {
-    width: 100%;
-    height: 100%;
-    display: block;
+.info-card__title {
+    font-size: 24px;
+    margin: 0 0 12px 0;
+    color: white;
 }
 
-/* Информация о команде */
-.team-info {
-    flex: 1;
-    min-width: 0;
+.info-card__leader {
+    margin: 0 0 8px 0;
 }
 
-.team-name {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 8px;
+.info-card__description {
+    margin: 0 0 16px 0;
 }
 
-.team-leader {
-    font-size: 14px;
-    margin-bottom: 8px;
-}
-
-.team-leader a {
+.info-card__link {
     color: white;
     text-decoration: underline;
 }
 
-.team-description {
-    font-size: 12px;
-    margin-bottom: 8px;
+.info-card__buttons {
+    display: flex;
+    gap: 12px;
 }
 
-.team-link {
-    font-size: 12px;
-    text-decoration: underline;
-}
-
-/* Ссылки в карточках команд */
-.team-item a {
+.info-card__button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
     color: white;
-    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease;
 }
 
-.team-item a:hover {
-    color: #E8E8E8;
+.info-card__button:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
 
-/* Таблица для сетки команд */
-.teams-section table td {
-    width: 50%;
-    padding: 5px;
-    vertical-align: top;
+.block-title.title-medium {
+    font-size: 32px;
+    color: #24292f;
+    margin-bottom: 20px;
 }
+
+
+
+
+.sidebar {  /* меню слева */
+    width: 250px;  /* или другая фиксированная ширина */
+    flex-shrink: 0;
+    background: #fff;
+    padding: 20px;
+}
+
+.main-content {  /* основной контент справа */
+    flex-grow: 1;
+    padding: 20px;
+}
+
 </style>
-
