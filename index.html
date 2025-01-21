@@ -1,15 +1,22 @@
 <body>
 
-<!-- 1. ХЕДЕР 
-/* ==========================================================================
-   заметки: поменять ссылку на фон и возможно переделать чтобы фон был всегда а надпись менялась
-   ========================================================================== */-->
-
-<div class="header">
-    <img src="https://jing.yandex-team.ru/files/saltykov/Общая%20на%20вики%202.png" alt="Header Image" style="width: 100%; display: block;">
+<div class="banner">
+    <div class="banner__content">
+        <div class="banner__left">
+            <img src="https://jing.yandex-team.ru/files/saltykov/белый.png" alt="Logo" class="banner__logo">
+            <h1 class="banner__title">Служба Бизнес и Стратегического Анализа</h1>
+        </div>
+        <div class="banner__right">
+            <div class="pattern-item" style="background-color: #FF6A6A; height: 35px;"></div>
+            <div class="pattern-item" style="background-color: #7FDDFF; height: 20px;"></div>
+            <div class="pattern-item" style="background-color: #3AD66E; height: 10px;"></div>
+            <div class="pattern-item" style="background-color: #FF6B6B; height: 30px;"></div>
+            <div class="pattern-item" style="background-color: #7FDDFF; height: 15px;"></div>
+            <div class="pattern-item" style="background-color: #7FDDFF; height: 5px;"></div>
+            <div class="pattern-item" style="background-color: #FF6B6B; height: 35px;"></div>
+        </div>
+    </div>
 </div>
-
-
 <!-- 2. ОСНОВНОЕ ТЕЛО СТАНИЦЫ 
 /* ==========================================================================
    идет как таблица / тут открываем, потом следим за наполнением / блоками
@@ -17,16 +24,9 @@
 
 
 <table>
-    <tr>
-
-
-<!-- 2.1. МЕНЮ 
-/* ==========================================================================
-   тут добавляются топики и ссылки. на каждой странице держим одно и то-же меню для удобства навигации. каждый раз активное меню (страницу) проставляем класс active
-   ========================================================================== */-->
-
-        <td class="menu">
-            <div class="menu-title">Меню</div>
+   <tr>
+      <td class="menu">
+         <div class="menu-title">Меню</div>
             <ul class="menu-links">
                 <li><a href="#" class="active">Основное</a></li>
                 <li><a href="#">Topic 1</a></li>
@@ -34,13 +34,15 @@
                 <li><a href="#">Topic 3</a></li>
                 <li><a href="#">Topic 4</a></li>
             </ul>
-        </td>
+      </td>
+      <td>
+
 
 <!-- 2.2. ТЕКСТОВЫЙ БЛОК 
 /* ==========================================================================
    тут пишем основной текст / надо будет сделать полужирные куски (возможно). 
    ========================================================================== */-->
-        <td>
+
             <div class="text-block">
                 <div class="block-title title-large">Чем мы занимаемся</div>
                 <div class="text-content">Наша служба отвечает за предоставление отчетности и аналитики по основным показателям вокруг рекламной выручки Яндекса, которые основаны на данных и имеют решающее значение для принятия решений топ-менеджментом, повышающих коммерческую и финансовую эффективность деятельности Портала.
@@ -78,6 +80,10 @@
                 <div class="info-block-title">Статус</div>
                 <div class="info-block-content">Доступно</div>
             </div>
+            <div class="info-block">
+                <div class="info-block-title">Категория</div>
+                <div class="info-block-content">Основная информация</div>
+            </div>
         </div>
     </div>
 </div>
@@ -88,79 +94,107 @@
    заметки
    ========================================================================== */-->
 
-<div class="block-title title-large">Команда</div>
-
-                <div class="teams-section">
-                    <div class="block-title title-medium">Teams</div>
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="team-item">
-                                    <div class="team-photo">
-                                        <a href="путь_к_большому_фото">
-                                            <img src="путь_к_фото_команды" alt="Фото команды">
-                                        </a>
-                                    </div>
-                                    <div class="team-info">
-                                        <div class="team-name">Название команды</div>
-                                        <div class="team-leader">Руководитель: <a href="#">Иван Иванов</a></div>
-                                        <div class="team-description">Описание команды короткое</div>
-                                        <div class="team-link">Ссылка на страницу команды</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="team-item">
-                                    <div class="team-photo">
-                                        <a href="путь_к_большому_фото">
-                                            <img src="путь_к_фото_команды" alt="Фото команды">
-                                        </a>
-                                    </div>
-                                    <div class="team-info">
-                                        <div class="team-name">Название команды</div>
-                                        <div class="team-leader">Руководитель: <a href="#">Иван Иванов</a></div>
-                                        <div class="team-description">Описание команды короткое</div>
-                                        <div class="team-link">Ссылка на страницу команды</div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="team-item">
-                                    <div class="team-photo">
-                                        <a href="путь_к_большому_фото">
-                                            <img src="путь_к_фото_команды" alt="Фото команды">
-                                        </a>
-                                    </div>
-                                    <div class="team-info">
-                                        <divclass="team-name">Название команды</div>
-                                        <div class="team-leader">Руководитель: <a href="#">Иван Иванов</a></div>
-                                        <div class="team-description">Описание команды короткое</div>
-                                        <div class="team-link">Ссылка на страницу команды</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="team-item">
-                                    <div class="team-photo">
-                                        <a href="путь_к_большому_фото">
-                                            <img src="путь_к_фото_команды" alt="Фото команды">
-                                        </a>
-                                    </div>
-                                    <div class="team-info">
-                                        <div class="team-name">Название команды</div>
-                                        <div class="team-leader">Руководитель: <a href="#">Иван Иванов</a></div>
-                                        <div class="team-description">Описание команды короткое</div>
-                                        <div class="team-link">Ссылка на страницу команды</div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
+<div class="teams-section">
+    <div class="block-title title-medium">Teams</div>
+    <table>
+        <tr>
+            <td>
+                <!-- Первая карточка -->
+   <div class="info-card">
+                    <div class="info-card__content">
+                        <div class="info-card__left">
+                            <div class="info-card__image-wrapper">
+                                <a href="путь_к_большому_фото">
+                                    <img src="путь_к_фото_команды" alt="Team photo" class="info-card__image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="info-card__right">
+                            <h2 class="info-card__title">Название команды</h2>
+                            <p class="info-card__leader">Руководитель: <a href="#" class="info-card__link">Иван Иванов</a></p>
+                            <p class="info-card__description">Описание команды короткое</p>
+                            <div class="info-card__buttons">
+                                <a href="#" class="info-card__button">Ссылка на страницу команды</a>
+                                <a href="#" class="info-card__button">Очередь в трекере</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </td>
-    </tr>
+            </td>
+            <td>
+                <!-- Вторая карточка -->
+<div class="info-card">
+                    <div class="info-card__content">
+                        <div class="info-card__left">
+                            <div class="info-card__image-wrapper">
+                                <a href="путь_к_большому_фото">
+                                    <img src="путь_к_фото_команды" alt="Team photo" class="info-card__image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="info-card__right">
+                            <h2 class="info-card__title">Название команды</h2>
+                            <p class="info-card__leader">Руководитель: <a href="#" class="info-card__link">Иван Иванов</a></p>
+                            <p class="info-card__description">Описание команды короткое</p>
+                            <div class="info-card__buttons">
+                                <a href="#" class="info-card__button">Ссылка на страницу команды</a>
+                                <a href="#" class="info-card__button">Очередь в трекере</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- Третья карточка -->
+<div class="info-card">
+                    <div class="info-card__content">
+                        <div class="info-card__left">
+                            <div class="info-card__image-wrapper">
+                                <a href="путь_к_большому_фото">
+                                    <img src="путь_к_фото_команды" alt="Team photo" class="info-card__image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="info-card__right">
+                            <h2 class="info-card__title">Название команды</h2>
+                            <p class="info-card__leader">Руководитель: <a href="#" class="info-card__link">Иван Иванов</a></p>
+                            <p class="info-card__description">Описание команды короткое</p>
+                            <div class="info-card__buttons">
+                                <a href="#" class="info-card__button">Ссылка на страницу команды</a>
+                                <a href="#" class="info-card__button">Очередь в трекере</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <!-- Четвертая карточка -->
+<div class="info-card">
+                    <div class="info-card__content">
+                        <div class="info-card__left">
+                            <div class="info-card__image-wrapper">
+                                <a href="путь_к_большому_фото">
+                                    <img src="путь_к_фото_команды" alt="Team photo" class="info-card__image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="info-card__right">
+                            <h2 class="info-card__title">Название команды</h2>
+                            <p class="info-card__leader">Руководитель: <a href="#" class="info-card__link">Иван Иванов</a></p>
+                            <p class="info-card__description">Описание команды короткое</p>
+                            <div class="info-card__buttons">
+                                <a href="#" class="info-card__button">Ссылка на страницу команды</a>
+                                <a href="#" class="info-card__button">Очередь в трекере</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
 </table>
 </body>
